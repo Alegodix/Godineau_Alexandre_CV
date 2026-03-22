@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Alexandre Godineau</title>
+    <style>
+        /* Réinitialisation stricte */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        /* Arrière-plan pour la vue Web */
+        body {
+            background-color: #525659;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        /* Conteneur strict A4 - Verrouillage des dimensions */
+        .a4-page {
+            background-color: #ffffff;
+            width: 210mm;
+            height: 296.5mm; /* Légèrement sous 297mm pour éviter la 2e page vide */
+            max-height: 297mm;
+            padding: 12mm 16mm; /* Marges réduites pour tout faire rentrer confortablement */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            color: #333333;
+            line-height: 1.3;
+            overflow: hidden; /* Empêche tout débordement */
+            
+            /* Répartition verticale homogène */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* HEADER */
+        .header-section { text-align: center; margin-bottom: 5px; }
+        h1 { 
+            font-size: 24pt; 
+            font-weight: bold; 
+            color: #1a1a1a; 
+            margin-bottom: 3px; 
+            letter-spacing: -0.5px;
+        }
+        .main-subtitle {
+            font-size: 12.5pt;
+            font-weight: bold;
+            color: #2b6cb0;
+            margin-bottom: 6px;
+        }
+        .contact-info { 
+            font-size: 10pt; 
+            color: #000000; 
+            margin-bottom: 10px; 
+        }
+        .contact-info a { 
+            color: #2b6cb0; 
+            text-decoration: none; 
+            font-weight: 600;
+        }
+        .contact-info a:hover { text-decoration: underline; color: #1e40af; }
+        .profile { 
+            text-align: justify; 
+            font-size: 10pt; 
+            color: #444444; 
+            font-style: italic; 
+            padding: 0 5px;
+        }
+
+        /* SECTIONS GÉNÉRALES */
+        h2 { 
+            color: #2b6cb0; 
+            font-size: 11.5pt; 
+            font-weight: bold; 
+            border-bottom: 2.5px solid #cbd5e1; 
+            padding-bottom: 3px; 
+            text-transform: uppercase; 
+            margin-top: 6px;
+            margin-bottom: 6px; 
+        }
+
+        /* COMPÉTENCES */
+        .skills p { font-size: 10pt; margin-bottom: 4px; }
+        .skills b { font-weight: 600; color: #1a1a1a; }
+
+        /* TABLEAUX POUR L'ALIGNEMENT DES DATES */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 2px; }
+        td.left { text-align: left; font-weight: bold; color: #1a1a1a; font-size: 10pt; }
+        td.right { text-align: right; font-weight: bold; color: #1a1a1a; font-size: 10pt; }
+        td.left-sub { text-align: left; font-style: italic; color: #555555; font-size: 10pt; }
+        td.right-sub { text-align: right; font-style: italic; color: #555555; font-size: 10pt; }
+
+        /* LISTES À PUCES */
+        ul { padding-left: 18px; font-size: 10pt; margin-bottom: 5px; margin-top: 1px; }
+        li { margin-bottom: 2px; text-align: justify; }
+        li b { color: #1a1a1a; }
+
+        /* ESPACEMENTS SPÉCIFIQUES */
+        .section-block { margin-bottom: 4px; }
+        .item-spacing { margin-top: 6px; }
+
+        /* RÈGLES D'IMPRESSION (PDF) */
+        @page { size: A4; margin: 0; }
+        @media print {
+            body { 
+                background: none; 
+                padding: 0; 
+                display: block; 
+            }
+            .a4-page { 
+                box-shadow: none; 
+                margin: 0; 
+                padding: 12mm 16mm; 
+                width: 210mm; 
+                height: 297mm;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a4-page">
+
+        <!-- HEADER & PROFIL -->
+        <div class="header-section">
+            <h1>Alexandre Godineau</h1>
+            <p class="main-subtitle">Candidature - Alternance - Assistant Architecte des systèmes d’information – 3 ans</p>
+            <p class="contact-info">
+                06 50 45 08 61 &nbsp;|&nbsp; 
+                <a href="mailto:alexandre_godineau@proton.me">alexandre_godineau@proton.me</a> &nbsp;|&nbsp; 
+                <a href="https://www.linkedin.com/in/alexandre-godineau-413329305/" target="_blank">https://www.linkedin.com/in/alexandre-godineau-413329305/</a> &nbsp;|&nbsp; 
+                <a href="https://portfolio-algo.vercel.app/" target="_blank">https://portfolio-algo.vercel.app/</a> &nbsp;|&nbsp; 
+                <a href="https://github.com/Alegodix" target="_blank">https://github.com/Alegodix</a>
+            </p>
+            <p class="profile">
+
+Futur ingénieur à CY Tech (5ème/69 en informatique) avec une spécialisation Économie & Finance. Fort d'une expertise en optimisation de flux (Projet WildWater) et d'un score TOEIC de 980/990, je souhaite mettre ma rigueur et mes compétences au service de la DSI Holding de LVMH.</div>
+        <!-- COMPÉTENCES -->
+        <div class="section-block">
+            <h2>Compétences</h2>
+            <div class="skills">
+                <p><b>PROGRAMMATION :</b> Shell, Python, C, C++, C#, PHP, JavaScript, HTML5, CSS3</p>
+                <p><b>LANGUES :</b> Anglais (Certification <b style="font-weight : 700">TOEIC 980/990</b>), Français (Maternel)</p>
+                <p><b>TECHNOLOGIES :</b> Notions PowerBI GitHub, Linux (Debian/Ubuntu), Unity, Blender, Visual Studio, VSCode, Photoshop, GenAI, API, Pack Office 365, Gestion de Projet,  Web Scraping</p>
+                <p><b>CENTRES D'INTÉRÊT :</b> Saxophone & Guitare (9 ans de conservatoire), Escalade de bloc, Dessin</p>
+                <p><b>QUALITÉS :</b> Autonomie, Leadership, Esprit Critique, Adaptabilité, Sens de l'organisation, Esprit d'équipe</p>
+            </div>
+        </div>
+
+        <!-- FORMATION -->
+        <div class="section-block">
+            <h2>Formation</h2>
+            
+            <table>
+                <tr>
+                    <td class="left">CYCLE INGÉNIEUR INFORMATIQUE</td>
+                    <td class="right">CY Tech (ex-EISTI)</td>
+                </tr>
+                <tr>
+                    <td class="left-sub">Cergy, France</td>
+                    <td class="right-sub">2026 - 2029</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Formation approfondie en ingénierie logicielle, architecture système et intelligence artificielle.</li>
+            </ul>
+            <table class="item-spacing">
+                <tr>
+                    <td class="left">CLASSE PRÉPARATOIRE INTÉGRÉE</td>
+                    <td class="right">CY Tech (ex-EISTI)</td>
+                </tr>
+                <tr>
+                    <td class="left-sub">Cergy, France</td>
+                    <td class="right-sub">2024 - 2026</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Filière Mathématiques-Informatique option Économie & Finance</li>
+                <li>Classement en Informatique : 5ème sur 69</li>
+            </ul>
+        </div>
+
+        <!-- PROJETS -->
+        <div class="section-block">
+            <h2>Projets</h2>
+
+            <table>
+                <tr>
+                    <td class="left">WildWater (C / Shell / Gnuplot)</td>
+                    <td class="right-sub">2026</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Logiciel de tri et de recherche optimisé pour le traitement de flux de données massifs.</li>
+                <li>Développement en équipe, gestion de deadlines.</li>
+            </ul>
+
+
+            <table  class="item-spacing">
+                <tr>
+                    <td class="left">Portfolio Web & IA (HTML / CSS / JavaScript / Google AI Cloud)</td>
+                    <td class="right-sub">2025 - 2026</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Création d'un site vitrine moderne intégrant un chatbot intelligent via API LLM (GenAI).</li>
+                <li>Mise en place d'un pipeline de déploiement continu via Vercel.</li>
+            </ul>
+
+            <table class="item-spacing">
+                <tr>
+                    <td class="left">Runner (C# / Unity / Programmation Orientée Objet)</td>
+                    <td class="right-sub">2025</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Développement autodidacte d'un jeu 2D complet incluant physique, menus et animations.</li>
+                <li>Apprentissage autonome du logiciel Unity.</li>
+            </ul>
+
+            <table  class="item-spacing">
+                <tr>
+                    <td class="left">MultiverSeus (C / Git / Linux / Gestion de Projet)</td>
+                    <td class="right-sub">2025</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Développement complet d'un logiciel de jeu tour-par-tour en C de bas niveau.</li>
+                <li>Possède tutoriel, IA adverse et mode réseau local.</li>
+            </ul>
+        </div>
+
+        <!-- EXPÉRIENCES -->
+        <div class="section-block">
+            <h2>Expérience Professionnelle</h2>
+            
+            <table>
+                <tr>
+                    <td class="left">Vendeur Polyvalent</td>
+                    <td class="right">Marché de Maisons-Alfort</td>
+                </tr>
+                <tr>
+                    <td class="left-sub">Maisons-Alfort, France</td>
+                    <td class="right-sub">2024 - 2025</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Gestion logistique autonome du stand : installation, inventaire et réapprovisionnement.</li>
+                <li>Responsabilité de la tenue de caisse et relation client en environnement à fort flux.</li>
+                <li>Développement de la rigueur opérationnelle et de la ponctualité (début de service à 6h30).</li>
+            </ul>
+
+            <table class="item-spacing">
+                <tr>
+                    <td class="left">Animateur</td>
+                    <td class="right">Telligo</td>
+                </tr>
+                <tr>
+                    <td class="left-sub">St-Chély-d'Apcher, France</td>
+                    <td class="right-sub">2023</td>
+                </tr>
+            </table>
+            <ul>
+                <li>Responsabilité de la sécurité physique et affective d'un groupe de mineurs (6-12 ans).</li>
+                <li>Conception et animation de projets pédagogiques techniques et ateliers créatifs.</li>
+                <li>Médiation et gestion des dynamiques de groupe au sein d'une équipe d'animation.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
